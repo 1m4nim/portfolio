@@ -1,6 +1,7 @@
 import styles from "./index.module.css";
 import Image from "next/image";
 import { MicroCMSImage } from "microcms-js-sdk";
+import Link from "next/link";
 
 type Introduction = {
   name: string;
@@ -17,3 +18,13 @@ export default function Introduction_({ introduction }: Props) {
     return <p>作っているからちょっと待っててね!!!</p>;
   }
 }
+
+<Link href="/introduction" className={styles.link} />;
+
+<Image
+  className={styles.image}
+  src="/icon.jpg"
+  alt="No Image"
+  width={1200}
+  height={630}
+/>;

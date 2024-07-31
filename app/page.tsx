@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { Introduction } from "@/app/_libs/microcms";
 import { getIntroduction } from "@/app/_libs/microcms";
 import Introduction_ from "@/app/_components/Introduction_";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getIntroduction({});
   return (
     <>
       <section className={styles.top}>

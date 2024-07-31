@@ -15,7 +15,7 @@ export type Blog = {
   title: string;
   Image: MicroCMSImage;
   body: string;
-};
+} & MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required");
@@ -30,20 +30,20 @@ const client = createClient({
   apiKey: process.env.MICROCMS_API_KEY,
 });
 
+export const getIntroduction = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Introduction>({
+    endpoint: "introduction",
+    queries,
+  });
+  return listData;
+};
+
 export const getBlogDetail = async (
   slug: string,
   queries?: MicroCMSQueries
 ) => {
   const listData = await client.getList<Blog>({
     endpoint: "blog",
-    queries,
-  });
-  return listData;
-};
-
-export const getIntroduction = async (queries?: MicroCMSQueries) => {
-  const listData = await client.getList<Introduction>({
-    endpoint: "introduction",
     queries,
   });
   return listData;

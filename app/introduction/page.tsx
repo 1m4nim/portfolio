@@ -1,7 +1,7 @@
-export default function Page() {
-  return (
-    <div style={{ margin: 20 }}>
-      <h1>自己紹介ページ</h1>
-    </div>
-  );
+import { getIntroduction } from "@/app/_libs/microcms";
+
+export default async function Page() {
+  const { contents: introduction } = await getIntroduction();
+
+  return <div>{JSON.stringify(introduction)}</div>;
 }

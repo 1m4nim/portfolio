@@ -17,21 +17,6 @@ export default function Header() {
         />
       </Link>
       <Menu />
-      {/* <nav>
-        <ul className={styles.items}>
-          <li>
-            <Link href="/introduction">自己紹介</Link>
-          </li>
-
-          <li>
-            <Link href="/blog">blog</Link>
-          </li>
-
-          <li>
-            <Link href="/contact">お問い合わせ</Link>
-          </li>
-        </ul>
-      </nav> */}
     </header>
   );
 }

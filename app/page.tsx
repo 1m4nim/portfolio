@@ -19,7 +19,7 @@ export default async function Home() {
         </section>
         <Image
           className={styles.bgimg}
-          src="/fungi.JPG"
+          src="/fungi.jpg"
           alt=""
           width={4000}
           height={1200}

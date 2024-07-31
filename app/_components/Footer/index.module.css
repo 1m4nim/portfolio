@@ -1,0 +1,38 @@
+.footer {
+    padding: 16px 24px;
+    text-align: center;
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: 40px;
+}
+
+.nav {
+    margin-bottom: 16px;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.item {
+    list-style: none;
+}
+
+.item a {
+    color: black;
+}
+
+@media(max-width:640px) {
+    .items {
+        flex-wrap: wrap;
+        gap: 8px 0;
+    }
+
+    .item {
+        width: 50%;
+    }
+}

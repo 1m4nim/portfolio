@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getBlogDetail } from "@/app/_libs/microcms";
 import { getIntroduction } from "@/app/_libs/microcms";
+import styles from "./page.module.css";
 
 type Props = {
   params: {

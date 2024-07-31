@@ -4,6 +4,6 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default async function Page() {
-  const data = await getIntroduction();
-  return;
+  const { contents: introduction } = await getIntroduction();
+  return <Introduction_ introduction={introduction} />;
 }

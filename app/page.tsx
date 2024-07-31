@@ -15,7 +15,7 @@ export default function Home() {
           <p className={styles.description}>私という存在を見ていってください</p>
         </div>
         <section className={styles.introduction}>
-          <h2 className={styles.introductionTitle}>自己紹介</h2>
+          <h2 className={styles.introductionTitle}></h2>
         </section>
         <Image
           className={styles.bgimg}

@@ -5,5 +5,5 @@ import styles from "./page.module.css";
 
 export default async function Page() {
   const { contents: introduction } = await getIntroduction();
-  return <Introduction_ introduction={introduction} />;
+  return <div>{JSON.stringify(introduction)}</div>;
 }

@@ -1,0 +1,24 @@
+.profile {
+    width: 85%;
+}
+
+.name {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.link {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: rgb(rgb(125, 235, 222));
+}
+
+@media(max-width:640px) {
+    .profile {
+        width: 50%;
+    }
+
+    .name {
+        width: 50%;
+    }
+}

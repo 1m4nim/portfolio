@@ -19,7 +19,9 @@ export default function Footer() {
           </li>
         </ul>
       </nav> */}
-      <p className={styles.cr}>© 2024 Minami Yamasaki</p>
+      <p className={styles.cr}>
+        © 2024 Minami Yamasaki https://github.com/1m4nim/
+      </p>
     </footer>
   );
 }

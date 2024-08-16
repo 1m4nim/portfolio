@@ -4,6 +4,7 @@ import type {
   MicroCMSImage,
   MicroCMSListContent,
 } from "microcms-js-sdk";
+import { requestToBodyStream } from "next/dist/server/body-streams";
 
 export type Introduction = {
   name: string;
@@ -42,11 +43,22 @@ export const getIntroduction = async (queries?: MicroCMSQueries) => {
   });
   return listData;
 };
-
-export const getBlogDetail = async (queries?: MicroCMSQueries) => {
+export const getBlogList = async (queries?: MicroCMSQueries) => {
   const listData = await client.getList<Blog>({
     endpoint: "blog",
     queries,
   });
   return listData;
+};
+
+export const getBlogDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Blog>({
+    endpoint: "blog",
+    contentId,
+    queries,
+  });
+  return detailData;
 };

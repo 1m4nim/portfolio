@@ -8,7 +8,7 @@ const data = {
       image: {
         url: "/fungi2.jpg",
         width: 350,
-        height: 350,
+        height: 450,
       },
       name: "Minami Yamasaki",
       profile:

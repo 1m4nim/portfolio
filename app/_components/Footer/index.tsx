@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      {/* <nav className={styles.nav}>
+      <nav className={styles.nav}>
         <ul className={styles.items}>
           <li className={styles.item}>
             <Link href="/introduction">自己紹介</Link>
@@ -18,7 +18,7 @@ export default function Footer() {
             <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
-      </nav> */}
+      </nav>
       <p className={styles.cr}>
         © 2024 Minami Yamasaki https://github.com/1m4nim/
       </p>

@@ -16,6 +16,19 @@ export default function Header() {
           priority
         />
       </Link>
+      <nav className={styles.nav}>
+        <ul className={styles.items}>
+          <li>
+            <Link href="/introduction">自己紹介</Link>
+          </li>
+          <li>
+            <Link href="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link href="contact">お問い合わせ</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

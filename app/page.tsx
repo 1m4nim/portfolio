@@ -63,7 +63,7 @@ export default async function Home() {
           ))}
         </ul>
         <div className={styles.blogLink}>
-          <ButtonLink href="/blog">Blogをもっと見る</ButtonLink>
+          <ButtonLink href="/blog">Blogを見てみる？</ButtonLink>
         </div>
       </section>
     </>

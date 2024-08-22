@@ -12,8 +12,8 @@ const data = {
       },
       name: "Minami Yamasaki",
       profile:
-        "菌類をこよなく愛する人間です。推しはテングタケ属(Amanita)です。最近になって(2024/01~)本腰を入れてプログラミングを始めました。それまでは、HTML＆CSSばかり触っており、自分のできることしか使わずに成果物を生み出していましたが、「動的なWEBサイトを作りたい」という気持ちが出てきたことをきっかけにJavaScriptに手を出してみたり、今まで知らなかったことを自分なりに解釈して触ってみたりしています。このポートフォリオサイトはNext.jsをつかって作りました、今まで自分が触ったことのなかった技術を使って作成したので優しい目で見ていただけると嬉しいです。よろしくお願いします。",
-      link: "https://github.com/1m4nim",
+        "菌類をこよなく愛する人間です。推しはテングタケ属(Amanita)です。最近になって(2024/01~)本腰を入れてプログラミングを始めました。それまでは、HTML＆CSSばかり触っており、自分のできることしか使わずに成果物を生み出していましたが、「動的なWEBサイトを作りたい」という気持ちが出てきたことをきっかけにJavaScriptに手を出してみたり、今まで知らなかったことを自分なりに解釈して触ってみたりしています。今まで自分が触ったことのなかった技術を使って作成したので優しい目で見ていただけると嬉しいです。よろしくお願いします。",
+      address: "fancustard9(@)gmail.com",
     },
   ],
 };
@@ -34,7 +34,7 @@ export default function Page() {
             <dl>
               <dt className={styles.name}>{introduction.name}</dt>
               <dt className={styles.profile}>{introduction.profile}</dt>
-              <dt className={styles.link}>{introduction.link}</dt>
+              <dt className={styles.address}>{introduction.address}</dt>
             </dl>
           </li>
         ))}

@@ -32,7 +32,7 @@
 }
 
 .tag {
-    background-color: #f3f3f3;
+    background-color: bisque;
     padding: 4px 12px;
     border-radius: 8px;
     white-space: nowrap;
@@ -67,5 +67,10 @@
         display: flex;
         align-items: center;
         gap: 16px;
+    }
+
+    .top {
+        background-color: bisque;
+        box-shadow: 8px;
     }
 }

@@ -1,0 +1,19 @@
+.button {
+    display: block;
+    padding: 20px 40px;
+    border-radius: 8px;
+    width: 300px;
+    background: url("/arrow.png") no-repeat right 20px center, #333;
+    color: #fff;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+@media(max-width:640px) {
+    .button {
+        padding: 16px 24px;
+        width: 100%;
+    }
+}

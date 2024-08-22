@@ -1,26 +1,15 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { getIntroduction } from "@/app/_libs/microcms";
+import { getBlogList, getIntroduction } from "@/app/_libs/microcms";
 import Introduction_ from "@/app/_components/Introduction_";
-import { Blog } from "@/app/_libs/microcms";
 import BlogList from "@/app/_components/BlogList";
-
-// const data: { contents: Blog[] } = {
-//   contents: [
-//     {
-//       id: "1",
-//       title: "はじめまして！！！",
-//       category: {
-//         body: "もっと勉強してもっとプログラミングができるようになりたい",
-//       },
-//       publishedAt: "2024/08/01",
-//       createdAt: "2024/08/011",
-//     },
-//   ],
-// };
+import { TOP_BLOG_LIMIT } from "@/app/_constants";
+import ButtonLink from "@/app/_components/ButtonLink";
 
 export default async function Home() {
-  const data = await getIntroduction({});
+  const data = await getBlogList({
+    limit: TOP_BLOG_LIMIT,
+  });
   return (
     <>
       <section className={styles.top}>
@@ -40,6 +29,42 @@ export default async function Home() {
           width={4000}
           height={1200}
         />
+      </section>
+      <section className={styles.blog}>
+        <h2 className={styles.blogTitle}></h2>
+        <ul>
+          {data.contents.map((article) => (
+            <li key={article.id} className={styles.list}>
+              <div className={styles.link}>
+                <Image
+                  className={styles.image}
+                  src="/noimage.png"
+                  alt="No Image"
+                  width={1200}
+                  height={630}
+                />
+                <dl className={styles.content}>
+                  <dt className={styles.blogItemTitle}>{article.title}</dt>
+                  <dd className={styles.meta}>
+                    <span className={styles.data}>
+                      <Image
+                        src="/clock.png"
+                        alt=""
+                        width={16}
+                        height={16}
+                        priority
+                      />
+                      {article.publishedAt}
+                    </span>
+                  </dd>
+                </dl>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <div className={styles.blogLink}>
+          <ButtonLink href="/blog">もっと見る</ButtonLink>
+        </div>
       </section>
     </>
   );
